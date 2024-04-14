@@ -7,6 +7,7 @@ public class AppDbContext : DbContext
     public DbSet<Grade> Grades { get; set; }
     public DbSet<Notification> Notifications { get; set; }
 
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         // Specify the path to your database file
