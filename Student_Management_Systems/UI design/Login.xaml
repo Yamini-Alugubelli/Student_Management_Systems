@@ -26,7 +26,7 @@
             <PasswordBox Grid.Row="2" x:Name="Password" Margin="61,4,0,4" Grid.ColumnSpan="2"/>
 
             <!-- Login Button -->
-            <Button Grid.Row="3" Content="Log In" HorizontalAlignment="Left" Padding="10,5" Margin="112,116,0,-96" Click="LoginButton_Click" Width="56" Grid.ColumnSpan="2" RenderTransformOrigin="0.521,1.301"/>
+            <Button Grid.Row="3" Content="Log In" HorizontalAlignment="Left" Padding="10,5" Margin="112,105,0,-85" Click="LoginButton_Click" Width="56" Grid.ColumnSpan="2" RenderTransformOrigin="0.521,1.301"/>
 
             <!-- Hyperlink to Signup Page -->
             <TextBlock Grid.Row="3" HorizontalAlignment="Left" RenderTransformOrigin="0.517,1.582" Margin="89,78,0,-52" Width="102" Grid.ColumnSpan="2">

@@ -9,10 +9,10 @@ namespace Student_Management_Systems.Models
     public class Grade
     {
         public int GradeId { get; set; }
-        public int UserId { get; set; } 
-        public string Score { get; set; }
-        public string Course { get; set; }
-        public Users User { get; set; }
+        public int UserId { get; set; }
+        public string Score { get; set; } = null!;
+        public string Course { get; set; } = null!;
+        public Users User { get; set; } = null!;
 
         public Grade(int gradeId, int userId, string score, string course, Users user)
         {
@@ -21,6 +21,10 @@ namespace Student_Management_Systems.Models
             Score = score;
             Course = course;
             User = user;
+        }
+
+        public Grade()
+        {
         }
     }
 }

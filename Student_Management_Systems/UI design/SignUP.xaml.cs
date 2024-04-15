@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Student_Management_Systems.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,30 @@ namespace Student_Management_Systems.UI_design
         public SignUP()
         {
             InitializeComponent();
+        }
+        private void SignupButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Assuming your input fields are named accordingly
+            var user = new Users
+            {
+                FirstName = FirstNameTextBox.Text,
+                LastName = LastNameTextBox.Text,
+                DateOfBirth = DateOfBirthPicker.SelectedDate.Value,
+                Gender = GenderComboBox.Text,
+                UserName = UserNameTextBox.Text,
+                Password = PasswordBox.Password, // You should hash this
+                IsProfessor = ProfessorCheckBox.IsChecked.Value
+            };
+            AddUserToDatabase(user);
+        }
+
+        private void AddUserToDatabase(Users user)
+        {
+            using (var context = new AppDbContext())
+            {
+                context.Users.Add(user);
+                context.SaveChanges();
+            }
         }
     }
 }

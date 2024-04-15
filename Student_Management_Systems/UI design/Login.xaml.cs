@@ -23,5 +23,14 @@ namespace Student_Management_Systems.UI_design
         {
             InitializeComponent();
         }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void SignupLink_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

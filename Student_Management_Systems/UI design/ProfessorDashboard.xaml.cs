@@ -23,5 +23,33 @@ namespace Student_Management_Systems.UI_design
         {
             InitializeComponent();
         }
+        private void EditDetails_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void NotificationTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void PostNotification_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void NotificationTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void UpdateGrade_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

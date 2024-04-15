@@ -24,12 +24,16 @@ namespace Student_Management_Systems.UI_design
             InitializeComponent();
         }
 
-        private void NameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void EditDetails_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void GradesList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
 
         }

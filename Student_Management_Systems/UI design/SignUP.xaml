@@ -31,19 +31,19 @@
             <TextBlock Grid.Row="6" Grid.Column="0" Text="Account Type" Margin="0,0,10,10" FontWeight="Bold"/>
 
             <!-- Input fields are placed in the second column -->
-            <TextBox Grid.Row="0" Grid.Column="1"/>
-            <TextBox Grid.Row="1" Grid.Column="1"/>
-            <DatePicker Grid.Row="2" Grid.Column="1"/>
-            <ComboBox Grid.Row="3" Grid.Column="1" SelectedIndex="0">
+            <TextBox Grid.Row="0" Grid.Column="1" x:Name="FirstNameTextBox"/>
+            <TextBox Grid.Row="1" Grid.Column="1" x:Name="LastNameTextBox"/>
+            <DatePicker Grid.Row="2" Grid.Column="1" x:Name="DateOfBirthPicker"/>
+            <ComboBox Grid.Row="3" Grid.Column="1" x:Name="GenderComboBox" SelectedIndex="0">
                 <ComboBoxItem Content="Male"/>
                 <ComboBoxItem Content="Female"/>
                 <ComboBoxItem Content="Other"/>
             </ComboBox>
-            <TextBox Grid.Row="4" Grid.Column="1"/>
-            <PasswordBox Grid.Row="5" Grid.Column="1"/>
+            <TextBox Grid.Row="4" Grid.Column="1" x:Name="UserNameTextBox"/>
+            <PasswordBox Grid.Row="5" Grid.Column="1" x:Name="PasswordBox"/>
 
             <!-- Account Type Checkbox -->
-            <CheckBox Grid.Row="6" Grid.Column="1" Content="Professor"/>
+            <CheckBox Grid.Row="6" Grid.Column="1" Content="Professor" x:Name="ProfessorCheckBox"/>
             <CheckBox Grid.Column="1" Content="Student" HorizontalAlignment="Left" Margin="111,0,0,0" Grid.Row="6" VerticalAlignment="Top"/>
             <!--CheckBox Grid.Row="6" Grid.Column="10" Content="Student"/-->
             <!-- Signup Button -->
