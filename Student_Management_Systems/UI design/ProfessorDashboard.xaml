@@ -1,0 +1,97 @@
+﻿<Window x:Class="Student_Management_Systems.UI_design.ProfessorDashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Professor Dashboard" SizeToContent="WidthAndHeight" MinWidth="800" MinHeight="600">
+    <Border Padding="10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Background="#FF333752" Padding="10">
+                <StackPanel>
+                    <Label Content="Professor Details" Foreground="White" FontSize="16" Padding="5"/>
+                    <!-- Add navigation or sorting buttons here -->
+                    <Button Content="Edit Details" Margin="5" Click="EditDetails_Click"/>
+                    <Button Content="Logout" Margin="5" Click="LogoutButton_Click"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Main content area -->
+            <Grid Grid.Column="1" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- Professor Personal Details Section -->
+                <Expander Grid.Row="0" Header="My Details" IsExpanded="True" Margin="5">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Content="First Name:" Width="100"/>
+                            <TextBlock Text="{Binding FirstName}" FontWeight="Bold"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Content="Last Name:" Width="100"/>
+                            <TextBlock Text="{Binding LastName}" FontWeight="Bold"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Content="Gender:" Width="100"/>
+                            <TextBlock Text="{Binding Gender}" FontWeight="Bold"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Content="Date of Birth:" Width="100"/>
+                            <TextBlock Text="{Binding DateOfBirth, StringFormat='{}{0:MM/dd/yyyy}'}" FontWeight="Bold"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Expander>
+
+
+                <!-- Tab Control for Notifications and Entering Grades -->
+                <TabItem Header="Notifications" Margin="5,159,-5,329" Grid.Row="1">
+                    <StackPanel>
+                        <TextBox x:Name="NotificationTextBox" 
+                 Text="Write a notification..." 
+                 Foreground="Gray" 
+                 Margin="5" 
+                 Height="100" 
+                 TextWrapping="Wrap"
+                 GotFocus="NotificationTextBox_GotFocus"
+                 LostFocus="NotificationTextBox_LostFocus"/>
+                        <Button Content="Post Notification" Click="PostNotification_Click" Margin="5"/>
+                        <!-- Here you can list posted notifications or provide other notification management features -->
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Grades" Margin="0,342,0,146" Grid.Row="1">
+                    <DataGrid x:Name="StudentsDataGrid" AutoGenerateColumns="False" CanUserAddRows="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Student Name" Binding="{Binding StudentName}" />
+                            <DataGridTemplateColumn Header="Grade">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBox Text="{Binding Grade, UpdateSourceTrigger=PropertyChanged}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Update">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Update" Click="UpdateGrade_Click"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+
+
+
+
+                <!-- Save Changes Button -->
+                <Button x:Name="SaveButton" Grid.Row="2" Content="Save Changes" HorizontalAlignment="Right" Visibility="Collapsed" Margin="5" Click="SaveButton_Click"/>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

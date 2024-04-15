@@ -1,0 +1,103 @@
+﻿<Window x:Class="Student_Management_Systems.UI_design.StudentDashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Student Dashboard" SizeToContent="WidthAndHeight" MinWidth="800" MinHeight="600">
+    <Border Padding="10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Sidebar for navigation -->
+            <Border Padding="10">
+                <StackPanel Grid.Column="0" Background="#FF333752">
+                    <Label Content="Student Details" Foreground="White" FontSize="16" Padding="5"/>
+                    <!-- Add navigation or sorting buttons here -->
+                    <Button Content="Edit Details" Margin="5" Click="EditDetails_Click"/>
+                    <Button Content="Logout" Margin="5" Click="LogoutButton_Click"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Main content area -->
+            <Grid Grid.Column="1" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <!-- Student Personal Details Section -->
+                <Expander Grid.Row="0" Header="My Details" IsExpanded="True" Margin="5">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Content="First Name:" Width="100"/>
+                            <TextBlock Text="{Binding FirstName}" FontWeight="Bold"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Content="Last Name:" Width="100"/>
+                            <TextBlock Text="{Binding LastName}" FontWeight="Bold"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Content="Gender:" Width="100"/>
+                            <TextBlock Text="{Binding Gender}" FontWeight="Bold"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Content="Date of Birth:" Width="100"/>
+                            <TextBlock Text="{Binding DateOfBirth, StringFormat='{}{0:MM/dd/yyyy}'}" FontWeight="Bold"/>
+                        </StackPanel>
+
+                        <!-- Add more detail sections as needed -->
+                    </StackPanel>
+                </Expander>
+
+
+
+                <Grid Grid.Column="1" Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Student Personal Details Section -->
+                    <!-- ...same as before... -->
+
+                    <!-- Tab Control for Courses and Grades -->
+                    <TabControl Grid.Row="2" Margin="5,10,5,-261">
+                        <TabItem Header="Courses">
+                            <ListView Name="CoursesList">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="Course Name" DisplayMemberBinding="{Binding Name}" Width="Auto"/>
+                                        <GridViewColumn Header="Instructor" DisplayMemberBinding="{Binding Instructor}" Width="Auto"/>
+                                        <!-- Additional course details -->
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                        </TabItem>
+                        <TabItem Header="Grades">
+                            <ListView Name="GradesList">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="Course" DisplayMemberBinding="{Binding Course}" Width="Auto"/>
+                                        <GridViewColumn Header="Grade" DisplayMemberBinding="{Binding Score}" Width="Auto"/>
+                                        <!-- Additional grade details -->
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                        </TabItem>
+                    </TabControl>
+
+                    <!-- Logout Button -->
+                    <!-- ...same as before... -->
+                </Grid>
+
+
+                <!-- Save Button (hidden by default) -->
+                <Button x:Name="SaveButton" Grid.Row="2" Content="Save Changes" HorizontalAlignment="Right" Visibility="Collapsed" Margin="5" Click="SaveButton_Click"/>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
