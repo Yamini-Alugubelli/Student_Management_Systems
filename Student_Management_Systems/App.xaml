@@ -9,7 +9,7 @@
 
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Themes/DashboardTheme.xaml"/>
-                <ResourceDictionary Source="UI_design/SignUP"/>
+                <ResourceDictionary Source="UI design/SignUP.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
         </ResourceDictionary>
