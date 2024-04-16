@@ -10,20 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Student_Management_Systems.UI_design
+namespace Student_Management_Systems
 {
     /// <summary>
     /// Interaction logic for StudentDashboard.xaml
     /// </summary>
-    public partial class StudentDashboard : Window
+    public partial class StudentDashboard : Page
     {
         public StudentDashboard()
         {
             InitializeComponent();
         }
-
         private void EditDetails_Click(object sender, RoutedEventArgs e)
         {
 

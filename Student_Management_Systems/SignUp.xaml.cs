@@ -10,27 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Student_Management_Systems.UI_design
+namespace Student_Management_Systems
 {
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Interaction logic for SignUp.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class SignUp : Page
     {
-        public Login()
+        public SignUp()
         {
             InitializeComponent();
-        }
-
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void SignupLink_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
