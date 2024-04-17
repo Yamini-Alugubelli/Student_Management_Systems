@@ -37,19 +37,19 @@
                     <StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="5">
                             <Label Content="First Name:" Width="100"/>
-                            <TextBlock Text="{Binding FirstName}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding FirstName}" FontWeight="Bold" x:Name="FirstName"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="5">
                             <Label Content="Last Name:" Width="100"/>
-                            <TextBlock Text="{Binding LastName}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding LastName}" FontWeight="Bold" x:Name="LastName"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="5">
                             <Label Content="Gender:" Width="100"/>
-                            <TextBlock Text="{Binding Gender}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Gender}" FontWeight="Bold" x:Name="Gender"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="5">
                             <Label Content="Date of Birth:" Width="100"/>
-                            <TextBlock Text="{Binding DateOfBirth, StringFormat='{}{0:MM/dd/yyyy}'}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding DateOfBirth, StringFormat='{}{0:MM/dd/yyyy}'}" FontWeight="Bold" x:Name="DateOfBirth"/>
                         </StackPanel>
                     </StackPanel>
                 </Expander>

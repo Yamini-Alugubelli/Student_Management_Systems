@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Student_Management_Systems"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-    Title="Sign-Up Page"  MinWidth="350" MinHeight="450" Background="WhiteSmoke">
+    Title="Sign-Up Page"  MinWidth="350" MinHeight="450" Background="WhiteSmoke" >
     <Border Padding="20">
         <Grid>
             <Grid.RowDefinitions>
@@ -52,7 +52,7 @@
             <CheckBox Grid.Column="1" Content="Student" HorizontalAlignment="Left" Margin="111,0,0,0" Grid.Row="6" VerticalAlignment="Top"/>
             <!--CheckBox Grid.Row="6" Grid.Column="10" Content="Student"/-->
             <!-- Signup Button -->
-            <Button Grid.Row="8" Grid.Column="1" Content="Sign Up" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="28,73,0,0" Command="{Binding SignupCommand}" RenderTransformOrigin="0.249,0.53" Width="91"/>
+            <Button Grid.Row="8" Grid.Column="1" Content="Sign Up" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="28,73,0,0" Command="{Binding SignupCommand}" RenderTransformOrigin="0.249,0.53" Width="91" Click="SignupButton_Click"/>
 
             <!-- Link to Login Page -->
             <TextBlock Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,10">

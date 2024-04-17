@@ -25,6 +25,11 @@ namespace Student_Management_Systems
             InitializeComponent();
             frame.NavigationService.Navigate(new SignUp());
 
+       
+             
+           
+            }
+
         }
     }
-}
+
